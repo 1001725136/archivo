@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+    <p>numero 1: <input id="n1" type="number"></p>
+    <p>numero 2: <input id="n2" type="number"></p>
+    <p>resultado: <input id="result" type="number">
+    </p> 
+    <button onclick="calcular(1)">sumar</button>
+    <button onclick="calcular(2)">restar</button>
+    <button onclick="calcular(3)">dividir</button>
+    <button onclick="calcular(4)">multiplicar</button>
+    <button onclick="limpiar()">limpiar</button>
+    
+    <script>
+       function calcular(tipo) {
+  var n1 = document.getElementById("n1").value;
+  if (!n1) return alert("ingresedocument. el numero 1");
+  var n2 = documet.getElementById("n2").value;
+  if (!n2) return alert("ingrese el numero 2");
+  n1 = parseInt(n1);
+  n2 = parseInt(n2);
+  var resultado;
+  if (tipo == 1) resultado = n1 + n2;
+  if (tipo == 2) resultado = n1 - n2;
+  if (tipo == 3) resultado = n1 / n2;
+  if (tipo == 4) resultado = n1 * n2;
+  document.getElementById("result").value = resultado;
+}
+function limpiar() {
+  document.getElementById("n1").value = "";
+  document.getElementById("n2").value = "";
+  document.getElementById("result").value = "";
+} 
+    </script>
+
+    
+</body>
+</html>
